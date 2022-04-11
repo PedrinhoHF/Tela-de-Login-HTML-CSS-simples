@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: "Montserrat";
+  color: #303433;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.side {
+  background: url(/imagens/bk.png) no-repeat;
+  background-size: 100% 103%;
+}
+
+.side img {
+  width: 50%;
+  max-width: 50%;
+}
+
+/* concluido primeira section*/
+
+.login-container {
+  max-width: 450px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.separator {
+  width: 150px;
+  height: 4px;
+  background-color: blueviolet;
+  margin: 24px;
+}
+
+.welcome-message {
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 28px;
+  margin-bottom: 30px;
+  color: #303433;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  width: 100%;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  font-size: 1.1em;
+  background-color: blue;
+}
+
+input {
+  width: 100%;
+  padding: 14px 64px;
+  background: #e6e6e6;
+  color: black;
+  letter-spacing: 0.5px;
+}
+
+input ~ i {
+  position: absolute;
+  left: 32px;
+  top: 19px;
+  color: #888;
+  transition: color 0.4s;
+}
+
+input:focus ~ i {
+  color: #843bc7;
+}
+
+button.submit {
+  color: #fff;
+  width: 32px auto;
+  padding: 14px 64px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #8b33c5, #15a0e1);
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+button.submit:hover {
+  background: linear-gradient(to right, #8b33c5, #15a0e1);
+  letter-spacing: 0.9px;
+}
+
+@media (max-width: 786px) {
+  .side img {
+    display: none;
+  }
+  section.side {
+    display: none;
+  }
+  section.main {
+    width: 100%;
+    height: 100vh;
+  }
+}
